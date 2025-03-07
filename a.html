@@ -21,6 +21,26 @@
             max-width: 600px;
             margin: auto;
         }
+        .flex-container2 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            background-color: #5a648f;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: auto;
+        }
+        .flex-container3 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            background-color: gray;
+            padding: 20px;
+            border-radius: 10px;
+            margin: auto;
+        }
         ul {
             background-color: #3c3f5d;
             font-weight: bold;
@@ -51,62 +71,78 @@
         button:hover {
             background-color: #c70039;
         }
+        .img {
+            display:flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            padding: 10%;
+            width: 60%;
+            height: 100%;
+            border-radius: 10px;
+        }
     </style>
 </head>
 <body>
 
     <h1>Alcohol</h1>
-    
-    <div class="flex-container">
-        <p>El consumo de alcohol genera diversas problemáticas en la sociedad, que afectan tanto a nivel individual como colectivo. Algunas de las principales son:</p>
-        <p>1. Problemas de salud pública: El consumo excesivo de alcohol está relacionado con enfermedades hepáticas, trastornos cardiovasculares, cáncer y trastornos mentales, además de contribuir a la desnutrición y al debilitamiento del sistema inmunológico.</p>
-        <p>Enfermedades crónicas:</p>
-        
-        <ul>
-            <li>Cirrosis hepática: El consumo excesivo de alcohol puede dañar el hígado y llevar a la cirrosis.</li>
-            <li>Diabetes: El consumo de alcohol puede aumentar el riesgo de desarrollar diabetes tipo 2.</li>
-            <li>Cáncer: El consumo de alcohol puede aumentar el riesgo de desarrollar ciertos tipos de cáncer, como el cáncer de hígado, mama, colon y recto.</li>
-        </ul>
-        
-        <p>Problemas de salud mental: </p>
+    <div class="flex-container3">
+        <div class="flex-container">
+            <div class="flex-container2">         
+                <a href="https://i.pinimg.com/736x/d7/52/fb/d752fb4eab6d7bd73a15d8b02cf5d974.jpg"><img class='img' src="https://i.pinimg.com/736x/d7/52/fb/d752fb4eab6d7bd73a15d8b02cf5d974.jpg" alt="Imagen de control"></a>
+                <a href="https://i.pinimg.com/736x/d9/90/62/d990627a118ae0fe8936df71ff03acb1.jpg"><img class='img' src="https://i.pinimg.com/736x/d9/90/62/d990627a118ae0fe8936df71ff03acb1.jpg" alt="Imagen de control"></a>
+                <a href="https://i.pinimg.com/736x/06/17/2e/06172e199feb401a76f1f108da1908bf.jpg"><img class='img' src="https://i.pinimg.com/736x/06/17/2e/06172e199feb401a76f1f108da1908bf.jpg" alt="Imagen de control"></a>
+            </div>
+            <p>El consumo de alcohol genera diversas problemáticas en la sociedad, que afectan tanto a nivel individual como colectivo. Algunas de las principales son:</p>
+            <p>1. Problemas de salud pública: El consumo excesivo de alcohol está relacionado con enfermedades hepáticas, trastornos cardiovasculares, cáncer y trastornos mentales, además de contribuir a la desnutrición y al debilitamiento del sistema inmunológico.</p>
+            <p>Enfermedades crónicas:</p>
+            
+            <ul>
+                <li>Cirrosis hepática: El consumo excesivo de alcohol puede dañar el hígado y llevar a la cirrosis.</li>
+                <li>Diabetes: El consumo de alcohol puede aumentar el riesgo de desarrollar diabetes tipo 2.</li>
+                <li>Cáncer: El consumo de alcohol puede aumentar el riesgo de desarrollar ciertos tipos de cáncer, como el cáncer de hígado, mama, colon y recto.</li>
+            </ul>
+            
+            <p>Problemas de salud mental: </p>
 
-        <ul>
-            <li>1. Depresión: El consumo de alcohol puede aumentar el riesgo de desarrollar depresión.</li>
-            <li>2. Ansiedad: El consumo de alcohol puede aumentar el riesgo de desarrollar ansiedad.</li>
-            <li>3. Trastornos de la personalidad: El consumo de alcohol puede aumentar el riesgo de desarrollar trastornos de la personalidad, como el trastorno límite de la personalidad.</li>
-        </ul>
-        
-        <p>Problemas de salud reproductiva: </p>
+            <ul>
+                <li>1. Depresión: El consumo de alcohol puede aumentar el riesgo de desarrollar depresión.</li>
+                <li>2. Ansiedad: El consumo de alcohol puede aumentar el riesgo de desarrollar ansiedad.</li>
+                <li>3. Trastornos de la personalidad: El consumo de alcohol puede aumentar el riesgo de desarrollar trastornos de la personalidad, como el trastorno límite de la personalidad.</li>
+            </ul>
+            
+            <p>Problemas de salud reproductiva: </p>
 
-        <ul>
-            <li>1. Infertilidad: El consumo de alcohol puede afectar la fertilidad en ambos sexos.</li>
-            <li>2. Aborto espontáneo: El consumo de alcohol puede aumentar el riesgo de aborto espontáneo.</li>
-            <li>3. Anomalías congénitas: El consumo de alcohol durante el embarazo puede aumentar el riesgo de anomalías congénitas.</li>
-         </ul>
+            <ul>
+                <li>1. Infertilidad: El consumo de alcohol puede afectar la fertilidad en ambos sexos.</li>
+                <li>2. Aborto espontáneo: El consumo de alcohol puede aumentar el riesgo de aborto espontáneo.</li>
+                <li>3. Anomalías congénitas: El consumo de alcohol durante el embarazo puede aumentar el riesgo de anomalías congénitas.</li>
+            </ul>
 
-         <p>Otros problemas de salud: </p>
+            <p>Otros problemas de salud: </p>
 
-         <ul>
-            <li>1. Lesiones: El consumo de alcohol puede aumentar el riesgo de lesiones, como caídas, accidentes de tráfico y violencia.</li>
-            <li>2. Infecciones: El consumo de alcohol puede aumentar el riesgo de infecciones, como la neumonía y la tuberculosis.</li>
-            <li>3. Problemas dentales: El consumo de alcohol puede aumentar el riesgo de problemas dentales, como la caries y la gingivitis.</li>
-         </ul>
-         
-         <p>Es importante destacar que el consumo moderado de alcohol, definido como hasta una bebida al día para las mujeres y hasta dos bebidas al día para los hombres, puede tener efectos beneficiosos para la salud, como reducir el riesgo de enfermedades cardíacas. Sin embargo, el consumo excesivo de alcohol puede tener efectos negativos graves para la salud.</p>
-        
-         <div class="button-container">
-            <a href="./al1.html">
-                <button>Más Información</button>
-            </a>
+            <ul>
+                <li>1. Lesiones: El consumo de alcohol puede aumentar el riesgo de lesiones, como caídas, accidentes de tráfico y violencia.</li>
+                <li>2. Infecciones: El consumo de alcohol puede aumentar el riesgo de infecciones, como la neumonía y la tuberculosis.</li>
+                <li>3. Problemas dentales: El consumo de alcohol puede aumentar el riesgo de problemas dentales, como la caries y la gingivitis.</li>
+            </ul>
+            
+            <p>Es importante destacar que el consumo moderado de alcohol, definido como hasta una bebida al día para las mujeres y hasta dos bebidas al día para los hombres, puede tener efectos beneficiosos para la salud, como reducir el riesgo de enfermedades cardíacas. Sin embargo, el consumo excesivo de alcohol puede tener efectos negativos graves para la salud.</p>
+            
+            <div class="button-container">
+                <a href="./al1.html">
+                    <button>Siguiente Pagina </button>
+                </a>
+            </div>
+            <ul>
+                <li>Luis Leonel Roa Barboza</li>
+                <li>Alan Guillermo Franco Gomez</li>
+                <li>Victoria Geraldine Paredes Monge</li>
+                <li>Sonia Ximena Chaparro Marin</li>
+            </ul>
+            <h1>6P</h1>
         </div>
-        <ul>
-            <li>Luis Leonel Roa Barboza</li>
-            <li>Alan Guillermo Franco Gomez</li>
-            <li>Victoria Geraldine Paredes Monge</li>
-            <li>Sonia Ximena Chaparro Marin</li>
-         </ul>
-         <h1>6P</h1>
     </div>
-
 </body>
 </html>
+
