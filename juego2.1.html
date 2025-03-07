@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego del Ahorcado</title>
+    <style>
+        body {
+            background-color: gray;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+        .flex-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #2c2f3d;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: auto;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        button {
+            background-color: #ff5733;
+            color: white;
+            font-size: 16px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background-color: #c70039;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Juego del Ahorcado</h1>
+    <p id="palabra"></p>
+    <p>Letras incorrectas: <span id="letras-incorrectas"></span></p>
+    <p>Vidas: <span id="vidas">6</span></p>
+    <input type="text" id="letra" maxlength="1" placeholder="Ingresa una letra">
+    <div class="button-container">
+        <button onclick="jugar()">Intentar</button>
+        <button onclick="reiniciarJuego()">Reintentar</button>
+    </div>
+    <p id="mensaje"></p>
+    
+    <p>
+        Las respuesta son palabras claves del texto
+    </p>
+    <p>
+       Las palabras no tienen acentos ni mayusculas!!
+    </p>
+    <script>
+        const palabras = ['diabetes', 'dependencia', 'pobreza','absentismo', 'aislamiento', 'cancer', 'ansiedad', 'trastornos', 'negligencia', 'abuso','depresión', 'infertilidad', 'Lesiones','Infecciones','caidas'];
+        let letrasCorrectas, letrasIncorrectas, intentos, juegoTerminado, palabraElegida;
+
+        function reiniciarJuego() {
+            letrasCorrectas = [];
+            letrasIncorrectas = [];
+            intentos = 6;
+            juegoTerminado = false;
+            palabraElegida = palabras[Math.floor(Math.random() * palabras.length)];
+
+            document.getElementById('letras-incorrectas').innerText = "";
+            document.getElementById('vidas').innerText = intentos;
+            document.getElementById('mensaje').innerText = "";
+            document.getElementById('letra').value = "";
+            mostrarNuevoTablero();
+        }
+
+        function mostrarNuevoTablero() {
+            let displayPalabra = palabraElegida.split('').map(l => letrasCorrectas.includes(l) ? l : '_').join(' ');
+            document.getElementById('palabra').innerText = displayPalabra;
+        }
+
+        function jugar() {
+            if (juegoTerminado) return;
+
+            let letra = document.getElementById('letra').value.toLowerCase();
+            document.getElementById('letra').value = '';
+
+            if (!letra.match(/[a-zñ]/) || letra.length !== 1) {
+                alert("Ingrese una letra válida");
+                return;
+            }
+
+            if (letrasCorrectas.includes(letra) || letrasIncorrectas.includes(letra)) {
+                alert("Ya intentaste esa letra");
+                return;
+            }
+
+            if (palabraElegida.includes(letra)) {
+                letrasCorrectas.push(letra);
+            } else {
+                letrasIncorrectas.push(letra);
+                intentos--;
+            }
+
+            document.getElementById('letras-incorrectas').innerText = letrasIncorrectas.join(', ');
+            document.getElementById('vidas').innerText = intentos;
+            mostrarNuevoTablero();
+
+            if (intentos === 0) {
+                document.getElementById('mensaje').innerText = "Perdiste. La palabra era: " + palabraElegida;
+                juegoTerminado = true;
+            } else if (!document.getElementById('palabra').innerText.includes('_')) {
+                document.getElementById('mensaje').innerText = "¡Ganaste!";
+                juegoTerminado = true;
+            }
+        }
+
+        reiniciarJuego(); 
+    </script>
+</body>
+</html>
